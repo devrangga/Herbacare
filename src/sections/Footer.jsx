@@ -3,7 +3,7 @@ import { herbacareLogo } from "../assets/icons";
 
 const Footer = () => {
   return (
-    <div className="flex justify-between flex-col md:gap-24 md:flex-row padding-x md:py-16 py-8 gap-4 bg-green-light">
+    <div className="flex justify-between flex-col md:gap-24 md:flex-row padding-x md:py-16 py-8 gap-4 bg-green-light relative">
       <div className="flex flex-col gap-4">
         <div>
           <img src={herbacareLogo} alt="herbacareLogo" />

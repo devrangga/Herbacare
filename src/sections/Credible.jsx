@@ -1,4 +1,5 @@
 import { credibleData } from "../constants";
+import { gridBg } from "../assets/images";
 
 const Credible = () => {
   return (
@@ -7,9 +8,9 @@ const Credible = () => {
         {credibleData.map((item, index) => (
           <div
             key={index}
-            className="gap-4 flex lg:flex-row flex-col justify-center items-center text-green-normal max-lg:text-center"
+            className="lg:gap-2 gap-1 flex lg:flex-row flex-col justify-center items-center text-green-normal max-lg:text-center"
           >
-            <div className="lg:w-[100px] w-[50px] h-auto ">
+            <div className="lg:w-[100px] w-[35px] h-auto ">
               <img
                 src={item.iconURL}
                 alt="credible logo"
@@ -17,10 +18,10 @@ const Credible = () => {
               />
             </div>
             <div className="flex flex-col lg:gap-2 font-medium">
-              <div className="lg:text-4xl text-2xl font-extrabold">
+              <div className="lg:text-4xl text-xl font-extrabold">
                 {item.number}
               </div>
-              <div>{item.label}</div>
+              <div className="lg:text-xl text-base">{item.label}</div>
             </div>
           </div>
         ))}

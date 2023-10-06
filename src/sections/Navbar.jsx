@@ -5,6 +5,7 @@ import { Button } from "../components";
 
 const Navbar = () => {
   const [scrollY, setScrollY] = useState(0);
+  const [menu, setMenu] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,9 +21,9 @@ const Navbar = () => {
 
   const isScrolled = scrollY > 200;
   return (
-    <header className=" w-full padding-x my-8 fixed z-10">
+    <header className="w-full padding-x my-8 fixed z-10" data-aos="fade-down">
       <nav
-        className={`flex justify-between items-center border-0 shadow-3xl px-8 lg:px-16 py-8 max-lg:py-4 rounded-lg ${
+        className={`flex justify-between items-center border-0 shadow-3xl px-8 lg:px-16 py-8 max-lg:py-4 rounded-lg relative ${
           isScrolled
             ? "border-2 border-grey-50 shadow-4xl bg-white"
             : "border-0 shadow-3xl bg-white"
@@ -35,13 +36,34 @@ const Navbar = () => {
             className="m-0 w-[150px] h-[50px]"
           />
         </a>
-        <div className="text-green-normal hidden max-xl:block">
+
+        <button
+          onClick={() => setMenu((prev) => !prev)}
+          className=" hidden max-xl:block relative"
+        >
           <img
             src={menuLogo}
             alt=""
             className="m-0 w-auto h-[30px] filter-green-dark"
           />
-        </div>
+
+          <div
+            className={`right-0 absolute  flex-col gap-8 bg-white shadow-xl border-2 border-grey-50 p-2 text-center rounded-lg transition-all ${
+              menu ? "opacity-100 flex" : "opacity-0 hidden"
+            }`}
+          >
+            {navLinks.map((item, index) => (
+              <a
+                href={item.href}
+                key={index}
+                className="px-8 py-2 rounded-lg hover:bg-green-normal hover:text-white"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+        </button>
+
         <div className="flex justify-between gap-12  max-xl:hidden text-green-normal text-xl">
           {navLinks.map((item, index) => (
             <div

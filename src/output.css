@@ -570,12 +570,36 @@ video {
   position: relative;
 }
 
+.right-0{
+  right: 0px;
+}
+
 .top-\[100px\]{
   top: 100px;
 }
 
+.top-0{
+  top: 0px;
+}
+
+.top-\[-100px\]{
+  top: -100px;
+}
+
+.top-\[-500px\]{
+  top: -500px;
+}
+
+.top-\[-750px\]{
+  top: -750px;
+}
+
 .z-10{
   z-index: 10;
+}
+
+.-z-50{
+  z-index: -50;
 }
 
 .m-0{
@@ -585,11 +609,6 @@ video {
 .my-12{
   margin-top: 3rem;
   margin-bottom: 3rem;
-}
-
-.my-16{
-  margin-top: 4rem;
-  margin-bottom: 4rem;
 }
 
 .my-8{
@@ -645,8 +664,8 @@ video {
   width: 25px;
 }
 
-.w-\[50px\]{
-  width: 50px;
+.w-\[35px\]{
+  width: 35px;
 }
 
 .w-\[75\%\]{
@@ -655,6 +674,11 @@ video {
 
 .w-auto{
   width: auto;
+}
+
+.w-fit{
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .w-full{
@@ -710,6 +734,10 @@ video {
 
 .items-center{
   align-items: center;
+}
+
+.justify-end{
+  justify-content: flex-end;
 }
 
 .justify-center{
@@ -822,6 +850,10 @@ video {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
 
+.bg-grid{
+  background-image: url('assets/images/gridBg.png');
+}
+
 .from-green-dark{
   --tw-gradient-from: #20270C var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(32 39 12 / 0) var(--tw-gradient-to-position);
@@ -842,9 +874,17 @@ video {
   --tw-gradient-to: #C7FF00 var(--tw-gradient-to-position);
 }
 
+.bg-no-repeat{
+  background-repeat: no-repeat;
+}
+
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.p-2{
+  padding: 0.5rem;
 }
 
 .p-4{
@@ -859,6 +899,11 @@ video {
 .py-12{
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+
+.py-2{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .py-24{
@@ -884,8 +929,8 @@ video {
   text-align: center;
 }
 
-.text-end{
-  text-align: end;
+.text-start{
+  text-align: start;
 }
 
 .font-outfit{
@@ -958,11 +1003,6 @@ video {
   color: rgb(109 112 121 / var(--tw-text-opacity));
 }
 
-.text-red-300{
-  --tw-text-opacity: 1;
-  color: rgb(252 165 165 / var(--tw-text-opacity));
-}
-
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -970,6 +1010,18 @@ video {
 
 .opacity-0{
   opacity: 0;
+}
+
+.opacity-100{
+  opacity: 1;
+}
+
+.opacity-50{
+  opacity: 0.5;
+}
+
+.opacity-25{
+  opacity: 0.25;
 }
 
 .shadow-3xl{
@@ -981,6 +1033,12 @@ video {
 .shadow-4xl{
   --tw-shadow: 0 15px 45px rgba(170, 214, 11, 0.3);
   --tw-shadow-colored: 0 15px 45px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-xl{
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -1008,8 +1066,8 @@ video {
 
 @media (min-width: 1024px){
   .padding-x{
-    padding-left: 16rem;
-    padding-right: 16rem;
+    padding-left: 13rem;
+    padding-right: 13rem;
   }
 }
 
@@ -1034,6 +1092,11 @@ video {
   border-color: rgb(113 143 45 / var(--tw-border-opacity));
 }
 
+.hover\:bg-green-normal:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(113 143 45 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-green-semilight:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(170 214 11 / var(--tw-bg-opacity));
@@ -1047,6 +1110,11 @@ video {
 .hover\:text-green-semilight:hover{
   --tw-text-opacity: 1;
   color: rgb(170 214 11 / var(--tw-text-opacity));
+}
+
+.hover\:text-white:hover{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .hover\:shadow-3xl:hover{
@@ -1085,6 +1153,10 @@ video {
 }
 
 @media not all and (min-width: 1024px){
+  .max-lg\:block{
+    display: block;
+  }
+
   .max-lg\:py-4{
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -1133,8 +1205,8 @@ video {
     width: 100px;
   }
 
-  .lg\:max-w-\[75\%\]{
-    max-width: 75%;
+  .lg\:max-w-\[85\%\]{
+    max-width: 85%;
   }
 
   .lg\:flex-row{
@@ -1175,5 +1247,10 @@ video {
 
   .lg\:text-\[84px\]{
     font-size: 84px;
+  }
+
+  .lg\:text-xl{
+    font-size: 20px;
+    line-height: 24.38px;
   }
 }

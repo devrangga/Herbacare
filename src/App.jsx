@@ -8,7 +8,14 @@ import {
   Footer,
 } from "./sections";
 
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 const App = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <main className="font-outfit relative">
       <Navbar />
@@ -18,7 +25,6 @@ const App = () => {
       <Dropdowns />
       <Articles />
       <Footer />
-      {/* <div className="text-red-300">aaa</div> */}
     </main>
   );
 };

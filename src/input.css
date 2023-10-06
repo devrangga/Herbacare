@@ -46,7 +46,7 @@
   }
 
   .padding-x {
-    @apply lg:px-64 md:px-24 px-8;
+    @apply lg:px-52 md:px-24 px-8;
   }
 
   .padding-y {

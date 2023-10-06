@@ -1,6 +1,6 @@
 import { useState } from "react";
-const Dropdown = ({ titleLogo, title, arrow, content }) => {
-  const [isShowed, setIsShowed] = useState(false);
+const Dropdown = ({ titleLogo, title, arrow, content, show }) => {
+  const [isShowed, setIsShowed] = useState(show);
   return (
     <div
       className={`bg-grey-50 p-4 rounded-xl
