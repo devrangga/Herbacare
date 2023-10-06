@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,jsx}"],
+  content: ["./index.html", "./src/**/*.{jsx,js}"],
   theme: {
     fontSize: {
       xs: ["12px", "16px"],
@@ -15,22 +15,23 @@ export default {
     },
     extend: {
       fontFamily: {
-        palanquin: ["Palanquin", "sans-serif"],
-        montserrat: ["Montserrat", "sans-serif"],
+        outfit: ["Outfit", "sans-serif"],
       },
       colors: {
-        primary: "#ECEEFF",
-        "coral-red": "#FF6452",
-        "slate-gray": "#6D6D6D",
-        "pale-blue": "#F5F6FF",
-        "white-400": "rgba(255, 255, 255, 0.80)",
+        "green-dark": "#20270C",
+        "green-normal": "#718F2D",
+        "green-semilight": "#AAD60B",
+        "green-light": "#C7FF00",
+        "grey-500": "#6D7079",
+        "grey-200": "#B6B8BC",
+        "grey-50": "#F3F3F3",
       },
       boxShadow: {
-        "3xl": "0 10px 40px rgba(0, 0, 0, 0.1)",
+        "3xl": "0 15px 45px rgba(113, 143, 45, 0.15)",
+        "4xl": "0 15px 45px rgba(170, 214, 11, 0.3)",
       },
       backgroundImage: {
-        hero: "url('assets/images/collection-background.svg')",
-        card: "url('assets/images/thumbnail-background.svg')",
+        grid: "url('assets/images/gridBg.png')",
       },
       screens: {
         wide: "1440px",

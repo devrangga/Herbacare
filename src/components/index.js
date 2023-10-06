@@ -1,15 +1,7 @@
 import Button from "./Button";
-import Nav from "./Nav";
-import ShoeCard from "./ShoeCard";
-import PopularProductCard from "./PopularProductCard";
-import ServiceCard from "./ServiceCard";
-import ReviewCard from "./ReviewCard";
+import CredibleCard from "./CredibleCard";
+import TeraphyCard from "./TeraphyCard";
+import Dropdown from "./Dropdown";
+import Article from "./Article";
 
-export {
-    Button,
-    Nav,
-    ShoeCard,
-    PopularProductCard,
-    ServiceCard,
-    ReviewCard,
-}
+export { Button, CredibleCard, TeraphyCard, Dropdown, Article };

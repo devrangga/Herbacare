@@ -1,19 +1,9 @@
+import Navbar from "./Navbar";
+import TeraphyPlaces from "./TeraphyPlaces";
 import Hero from "./Hero";
-import PopularProducts from "./PopularProducts";
-import SuperQuality from "./SuperQuality";
-import Services from "./Services";
-import SpecialOffer from "./SpecialOffer";
-import CustomerReviews from "./CustomerReviews";
-import Subscribe from "./Subscribe";
+import Credible from "./Credible";
+import Dropdowns from "./Dropdowns";
+import Articles from "./Articles";
 import Footer from "./Footer";
 
-export {
-    Hero,
-    PopularProducts,
-    SuperQuality,
-    Services,
-    SpecialOffer,
-    CustomerReviews,
-    Subscribe,
-    Footer
-}
+export { Navbar, TeraphyPlaces, Hero, Credible, Dropdowns, Articles, Footer };

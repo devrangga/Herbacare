@@ -1,29 +1,21 @@
+import { loginLogo } from "../assets/icons";
+
 const Button = ({
   label,
   iconURL,
-  backgroundColor,
+  bgColor,
   textColor,
   borderColor,
   fullWidth,
 }) => {
   return (
-    <button
-      className={`flex justify-center items-center gap-2 px-7 py-4 border font-montserrat text-lg leading-none
-      ${
-        backgroundColor
-          ? `${backgroundColor} ${textColor} ${borderColor}`
-          : "bg-coral-red text-white border-coral-red"
-      } rounded-full ${fullWidth && "w-full"}`}
-    >
-      {label}
-
-      {iconURL && (
-        <img
-          src={iconURL}
-          alt='arrow right icon'
-          className='ml-2 rounded-full bg-white w-5 h-5'
-        />
-      )}
+    <button className="flex justify-center items-center gap-4 px-8 py-4 text-lg bg-green-normal text-white text-xl rounded-full hover:bg-green-semilight hover:text-green-dark hover:shadow-3xl transition-all ease-in-out group">
+      <img
+        src={loginLogo}
+        alt="login"
+        className="w-[25px] h-auto filter-white group-hover:filter-green-dark"
+      />
+      <div className="font-medium">{label}</div>
     </button>
   );
 };
