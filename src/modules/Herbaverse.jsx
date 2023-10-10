@@ -22,7 +22,7 @@ const Herbaverse = () => {
             scale={[20, 20, 20]}
             children-0-castShadow
           /> */}
-          <Environment preset="forest" background />
+          <Environment files={"/floor2.hdr"} background />
 
           <OrbitControls />
         </XR>

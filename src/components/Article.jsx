@@ -3,7 +3,7 @@ const Article = ({ itemData }) => {
     <div className="flex flex-col p-4 gap-4  rounded-2xl bg-grey-50  ">
       <div className="relative rounded-2xl overflow-hidden group hover:cursor-pointer ">
         <img
-          src={itemData.imageURL}
+          src={"https://herbacare.tech/" + itemData.image}
           alt="articleImg"
           className="rounded-2xl object-cover w-full h-full"
         />
@@ -15,7 +15,7 @@ const Article = ({ itemData }) => {
         <div className="text-lg font-extrabold text-green-dark">
           {itemData.title}
         </div>
-        <div className="text-grey-200">{itemData.description}</div>
+        <div className="text-grey-200">{itemData.category.category_name}</div>
       </div>
     </div>
   );
