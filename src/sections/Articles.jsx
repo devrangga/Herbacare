@@ -3,13 +3,18 @@ import { Article } from "../components";
 import { articleLogo } from "../assets/icons";
 import { useEffect, useState } from "react";
 import axios from "axios";
-
+import Modal from "react-responsive-modal";
+import "react-responsive-modal/styles.css";
 const Articles = () => {
   const [article, setArticle] = useState(null);
+  const [open, setOpen] = useState(false);
+  const [selected, setSelected] = useState(null);
+
   useEffect(() => {
     axios
       .get("https://herbacare.tech/api/article/all")
       .then((res) => {
+        console.log(res);
         setArticle(res.data.data.slice(0, 4));
       })
       .catch((e) => {
@@ -39,9 +44,30 @@ const Articles = () => {
         <div className="grid  grid-cols-2 gap-4">
           {article.map(
             (item, index) =>
-              item.title && <Article key={index} itemData={item} />
+              item.title && (
+                <Article
+                  key={index}
+                  itemData={item}
+                  onClick={() => {
+                    setOpen(true);
+                    setSelected(item);
+                  }}
+                />
+              )
           )}
         </div>
+        {selected && (
+          <Modal open={open} onClose={() => setOpen(false)}>
+            <img
+              src={"https://herbacare.tech/" + selected.image}
+              className="w-52 rounded-2xl"
+            />
+            <h2 className="text-xl py-2 font-bold">{selected.title}</h2>
+            <h2 className="text-xl py-2 ">
+              Baca selengkapnya di aplikasi Herbacare
+            </h2>
+          </Modal>
+        )}
       </div>
     )
   );

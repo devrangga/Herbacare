@@ -8,6 +8,7 @@ import teraphyPlace1 from "./teraphyPlace1.png";
 import teraphyPlace2 from "./teraphyPlace2.png";
 import teraphyPlace3 from "./teraphyPlace3.png";
 import gridBg from "./gridBg.png";
+import playstore from "./logo-google.png";
 
 export {
   heroImage,
@@ -20,4 +21,5 @@ export {
   teraphyPlace2,
   teraphyPlace3,
   gridBg,
+  playstore,
 };

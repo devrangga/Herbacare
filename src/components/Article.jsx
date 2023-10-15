@@ -1,6 +1,9 @@
-const Article = ({ itemData }) => {
+const Article = ({ itemData, onClick }) => {
   return (
-    <div className="flex flex-col p-4 gap-4  rounded-2xl bg-grey-50  ">
+    <div
+      className="flex flex-col p-4 gap-4  rounded-2xl bg-grey-50  "
+      onClick={onClick}
+    >
       <div className="relative rounded-2xl overflow-hidden group hover:cursor-pointer ">
         <img
           src={"https://herbacare.tech/" + itemData.image}

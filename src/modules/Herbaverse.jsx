@@ -16,12 +16,6 @@ const Herbaverse = () => {
       <VRButton />
       <Canvas>
         <XR>
-          {/* <primitive
-            object={gltf.scene}
-            position={[0, -10, 1]}
-            scale={[20, 20, 20]}
-            children-0-castShadow
-          /> */}
           <Environment files={"/floor2.hdr"} background />
 
           <OrbitControls />

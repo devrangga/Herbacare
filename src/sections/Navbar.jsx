@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { herbacareLogo, menuLogo } from "../assets/icons";
 import { navLinks } from "../constants";
 import { Button } from "../components";
+import { playstore } from "../assets/images";
 
 const Navbar = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -75,7 +76,7 @@ const Navbar = () => {
           ))}
         </div>
         <div className="block max-xl:hidden">
-          <Button label={"Login"} />
+          <Button label={"Download"} logo={playstore} />
         </div>
       </nav>
     </header>

@@ -1,0 +1,1 @@
+scp -r ./dist/* root@103.84.206.207:/var/www/html/herbacare.site
